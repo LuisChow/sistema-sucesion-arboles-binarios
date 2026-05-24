@@ -44,6 +44,52 @@ g++ src/main.cpp -o bin/main.exe
 
 Al iniciar, el programa carga `bin/royal_data.csv` y muestra un menú interactivo con las opciones: ver la línea de sucesión, asignar un nuevo rey, editar un noble o salir.
 
+## Ejemplo de ejecución
+
+```
+Datos cargados exitosamente.
+
+1. Ver Linea
+2. Asignar Rey
+3. Editar
+4. Salir
+Op: 1
+
+--- Linea de Sucesion (Vivos) ---
+- Terenas Menethil (71 a, H) [REY/REINA ACTUAL]
+- Anduin Wrynn (22 a, H)
+- Bolvar Fordragon (5 a, H)
+- Jaina Proudmoore (21 a, M)
+- Muradin Bronzebeard (50 a, H)
+- Magni Bronzebeard (55 a, H)
+- Moira Thaurissan (25 a, M)
+
+1. Ver Linea
+2. Asignar Rey
+3. Editar
+4. Salir
+Op: 2
+Reinado de Terenas terminado.
+>>> NUEVO REY/REINA: Anduin <<<
+
+1. Ver Linea
+2. Asignar Rey
+3. Editar
+4. Salir
+Op: 1
+
+--- Linea de Sucesion (Vivos) ---
+- Terenas Menethil (71 a, H)
+- Anduin Wrynn (22 a, H) [REY/REINA ACTUAL]
+- Bolvar Fordragon (5 a, H)
+- Jaina Proudmoore (21 a, M)
+- Muradin Bronzebeard (50 a, H)
+- Magni Bronzebeard (55 a, H)
+- Moira Thaurissan (25 a, M)
+```
+
+En el ejemplo, el rey Terenas tiene 71 años, por lo que al asignar un nuevo rey el sistema lo retira del trono y recorre el árbol en profundidad hasta encontrar al primer heredero apto: Anduin, varón menor de 70 años de la rama de descendientes.
+
 ## Estructura del proyecto
 
 ```
