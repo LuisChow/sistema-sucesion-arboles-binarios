@@ -120,6 +120,9 @@ public:
         string line;
         bool isHeader = true;
         while (getline(file, line)) {
+            // Elimina el retorno de carro de archivos CSV con formato Windows (CRLF),
+            // evitando que la ultima columna quede con un caracter \r adicional.
+            if (!line.empty() && line.back() == '\r') line.pop_back();
             if (isHeader) { isHeader = false; continue; } // Saltar cabecera
             if (line.empty()) continue;
 
